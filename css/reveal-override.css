@@ -33,17 +33,18 @@
 body,
 .reveal {
   /* background-color: #f2f2f2; */
-  font-family: "Shadows Into Light", sans-serif;
+  /* font-family: "Shadows Into Light", sans-serif; */
+  font-family: "Handlee", sans-serif;
   font-weight: normal;
 }
 
 .reveal h1 {
-  font-size: 1em;
+  font-size: 2em;
 }
 
 .reveal h2 {
   letter-spacing: 3px;
-  font-size: 1em;
+  font-size: 2em;
 }
 
 .reveal h3 {
@@ -100,6 +101,20 @@ body,
   font-family: "Special Elite", monospace !important;
 }
 
+
+#fragment-list {
+  line-height: 1.6;
+  text-align: center;
+  list-style-type: none;
+  font-size: 5vh;
+}
+
+.reveal ul {
+  line-height: 1.6;
+  list-style-type: none;
+  font-size: 5vh;
+}
+
 .reveal code {
   font-family: "Special Elite", monospace !important;
   color: black !important;
@@ -139,6 +154,7 @@ body,
     color: black;
   }
 }
+
 
 #title-footer {
   font-family: "Cabin", sans-serif;
