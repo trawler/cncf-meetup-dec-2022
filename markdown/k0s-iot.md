@@ -77,7 +77,7 @@ Note:
         <ul style=text-align:left;font-size:25px;list-style-type:square>
           <li>We want to be able to run workers in isolated networks from the control-plane</li>
           <li>Control-plane and Worker network space can even have overlapping IP addresses</li>
-          <li>KAS has a secure channel to the worker network (using gRPC)</li>
+          <li>K8s API Server has a secure channel to the worker network (using gRPC)</li>
           <li>Advanced features: Load balancing, Monitoring, Auditing</li>
         </ul>
     </td>
@@ -117,7 +117,7 @@ https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/12
 </table>
 
 
-#### Swappable Components, 
+#### Batteries Included, 
 #### but swappable
 
 <table style="width: 100%">
@@ -198,3 +198,4 @@ Architecture: x86-64, ARM64, ARMv7
 
 
 #### Demo
+
