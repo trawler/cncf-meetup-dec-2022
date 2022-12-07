@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 python_version=`python -c "import sys;t='{v[0]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";`
 

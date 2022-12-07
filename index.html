@@ -19,52 +19,34 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-markdown="markdown/k0s-iot.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+			<section data-markdown="markdown/introduction.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
 				data-separator-notes="^Note:">
 			</section>
 			<section data-auto-animate>
-				<pre><code data-trim data-noescape data-line-numbers="1|8|14|19|20-24|28-31">
-apiVersion: k0sctl.k0sproject.io/v1beta1
-kind: Cluster
-metadata:
-	name: k0s-cluster
-spec:
-	hosts:
-	- ssh:
-		address: 3.248.134.234
-		user: ubuntu
-		port: 22
-		keyPath: /Users/kalmog/.ssh/id_aws
-	role: controller
-	- ssh:
-		address: 192.168.64.3
-		user: ubuntu
-		port: 22
-		keyPath: /Users/kalmog/.ssh/id_rsa
-	role: worker
-	uploadBinary: true
-	files:
-		- name: image-bundle
-		  src: k0s-airgap-bundle-v1.23.8+k0s.0-amd64
-		  dstDir: /var/lib/k0s/images/
-		  perm: 0600
-k0s:
-	version: 1.23.8+k0s.0
-	dynamicConfig: false
-	config:
-	  spec:
-	  	api:
-		  	externalAddress: 3.248.134.234
+				<pre><code data-trim data-noescape data-line-numbers="3">
+$ kubectl get pods
+NAME                         READY   STATUS    RESTARTS       AGE
+go-webapp-7c65f7886c-dcwhs   1/1     Running   0              3h27m
+nginx-ff6774dc6-z2l8h        1/1     Running   2 (2d1h ago)   2d4h
+			</code></pre>
+			</section>
+			<section data-auto-animate>
+				<pre><code data-trim data-noescape data-line-numbers="1|2|3|4|5">
+kubectl debug \
+	-it \
+	go-webapp-7c65f7886c-dcwhs \
+	--image=busybox \
+	--target=golang-webapp
 					</code></pre>
 			</section>
-			<section>
-				<video data-autoplay src="./media/kcd-berlin-2022.mp4"></video>
+			<section data-markdown="markdown/ephemeral-containers.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:">
 			</section>
 		</div>
 		< <div id="title-footer" style="background: rgba(0,0,0,0.1);">
-			<span class="element">KCD-Berlin 2022</span>
-			<span class="element">Karen Almog</span>
-			<span class="element"><a href="https://twitter.com/kar3na1mog" target="_blank">@kar3na1mog</a></span>
+			<span class="element">Karen Almog, Kubernetes & Cloud Native Berlin Meet-Up Dec 2022<br></span>
+			<span class="element">follow me on mastodon: </span>
+			<span class="element"><a href="https://hachyderm.io/@trawler" target="_blank">https://hachyderm.io/@trawler</a></span>	
 	</div>
 
 	<script type="text/javascript">
