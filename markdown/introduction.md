@@ -12,14 +12,13 @@ https://trawler.github.io/cncf-meetup-dec-2022<!-- .element: class="r-fit-text"-
 
 ##### About Me
 
-- Engineering Manager @ Flink
 - Software Engineer with Devops experience
+- Engineering Manager @ Flink
 - Open Source contributor
-- Loves everything to do with the sea
 
 <img src="./images/karen_circle.png" style="width: 20%;">
 
-https://github.com/trawler<!-- .element: style="width: 50%;"-->
+https://github.com/trawler
 
 
 #### Debugging Use-Cases
